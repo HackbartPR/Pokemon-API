@@ -1,0 +1,149 @@
+* {
+  margin: 0px;
+}
+#container {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.pokeCard {
+  margin: 10px;
+  width: 20vmax;
+  height: 35vmax;
+  border: 1px solid rgba(247, 181, 0, 1);
+  border-radius: 10px;
+  object-fit: cover;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(8, 1, 37, 0.71),
+    rgba(84, 2, 106, 0.71)
+  );
+  display: grid;
+  grid-template-areas: 'divImage' 'divInfo';
+  grid-template-rows: 1.5fr 1fr;
+  font-family: 'Gideon Roman', cursive;
+}
+.divImage {
+  grid-area: divImage;
+}
+.imagePoke {
+  grid-area: poke;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.divInfo {
+  display: grid;
+  grid-template-areas: 'divName divName divName' 'divHP divHP divHP' 'divType divAttack divDefense';
+  grid-template-rows: 1fr 1fr 2fr;
+  grid-template-columns: 0.7fr 1fr 1fr;
+  grid-area: divInfo;
+}
+.divName {
+  grid-area: divName;
+  position: relative;
+  text-align: center;
+  align-self: center;
+  font-size: 2vmax;
+  color: white;
+}
+.divHP {
+  grid-area: divHP;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hpBar {
+  height: 1vh;
+  width: 10vw;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 181, 0, 0.56),
+    rgba(247, 181, 0, 1)
+  );
+  border-radius: 2px;
+}
+.hpValue {
+  text-align: center;
+  align-self: center;
+  font-size: 1vmax;
+  color: white;
+}
+.divType {
+  grid-area: divType;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.imageType {
+  max-width: 60%;
+  max-height: 60%;
+  object-fit: contain;
+  grid-area: imageType;
+}
+.type {
+  width: 3vmax;
+  font-size: 1vmax;
+  border-radius: 8px;
+  text-align: center;
+  align-self: center;
+  grid-area: type;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 181, 0, 0.56),
+    rgba(247, 181, 0, 1)
+  );
+}
+.divAttack {
+  grid-area: divAttack;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.attack {
+  width: 5vmax;
+  font-size: 1vmax;
+  border-radius: 8px;
+  text-align: center;
+  align-self: center;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 181, 0, 0.56),
+    rgba(247, 181, 0, 1)
+  );
+}
+.attackValue {
+  text-align: center;
+  align-self: center;
+  font-size: 1.2vmax;
+  color: white;
+}
+.divDefense {
+  grid-area: divDefense;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.defense {
+  width: 5vmax;
+  font-size: 1vmax;
+  border-radius: 8px;
+  text-align: center;
+  align-self: center;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 181, 0, 0.56),
+    rgba(247, 181, 0, 1)
+  );
+}
+.defenseValue {
+  text-align: center;
+  align-self: center;
+  font-size: 1.2vmax;
+  color: white;
+}
